@@ -1,7 +1,11 @@
 import React from "react"
+import { Navbar } from "./Navbar"
 
 export const ProfilePage = () => {
-    return (
+    return (<>
+        <Navbar/>
         <div>ProfilePage</div>
+        </>
+        
     )
 }
