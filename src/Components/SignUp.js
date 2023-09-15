@@ -75,18 +75,18 @@ export const SignUp = () => {
             <div className="error">
               {error}
             </div></>}
-          <label>Name</label>
+          <label><b>Name</b></label>
           <input onChange={(e) =>
             setusername(e.target.value)} type="text" className="form-control" id="name" placeholder="Name" />
-          <label>Email address</label>
+          <label><b>Email address</b></label>
           <input onChange={(e) => setemail(e.target.value)} type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder="Email" />
           <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
           <br></br>
-          <label>Password</label>
+          <label><b>Password</b></label>
           <input onChange={(e) => setpassword(e.target.value)} type="password" className="form-control" id="password" placeholder="Password" />
-          <label>Address</label>
+          <label><b>Address</b></label>
           <input onChange={(e) => setaddress(e.target.value)} type="text" className="form-control" id="address" placeholder="Address" />
-          <label>Phone Number</label>
+          <label><b>Phone Number</b></label>
           <input onChange={(e) => setphoneno(e.target.value)} type="number" className="form-control" id="phoneno" placeholder="Phone Number" />
           <br></br>
           <div className="btn-box">

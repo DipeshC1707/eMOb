@@ -4,6 +4,7 @@ nav{
     width:100%;
     background-color: rgb(65, 232, 234);
     align-items: center;
+    
 }
 
 nav button{
@@ -11,6 +12,9 @@ nav button{
     background-color:  rgb(65, 232, 234);
     border: none;
     color:black;
+    font-family: century-gothic, 'sans-serif';
+    font-weight: 400;
+    font-style: normal;
 }
 
 .cart-icon-css{

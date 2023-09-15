@@ -76,12 +76,12 @@ export const Login = () => {
             <div className="error">
               {error}
             </div></>}
-          <label>Email address</label>
+          <label><strong>Email address</strong></label>
           <input onChange={(e) => setemail(e.target.value)} type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter Email" />
           <br></br>
         </form>
         <div className="form-group">
-          <label>Password</label>
+          <label><b>Password</b></label>
           <input onChange={(e) => setpassword(e.target.value)} type="password" className="form-control" id="password" placeholder="Enter Password" />
         </div>
         <div className="btn-box">
