@@ -10,7 +10,7 @@ export const Banner = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={slide1}
+          src={slide2}
           alt="First slide"
         />
         <Carousel.Caption>
@@ -19,14 +19,14 @@ export const Banner = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={slide2}
+          src={slide1}
           alt="Second slide"
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={slide3}
+          src={slide2}
           alt="Third slide"
         />
       </Carousel.Item>
