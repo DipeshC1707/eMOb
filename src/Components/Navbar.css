@@ -1,20 +1,38 @@
-nav{
+.navbar{
     display: flex;
     justify-content: flex-end;
     width:100%;
     background-color: rgb(65, 232, 234);
     align-items: center;
+    justify-content: space-between;
     
 }
 
+nav{
+    display: flex;
+    align-items:center;
+    padding: 0px;
+}
+
+.LeftContainer img{
+    width:75px;
+    mix-blend-mode:color-bl;
+}
+
 nav button{
-    margin: 5px;
+    margin: 1px 5px;
     background-color:  rgb(65, 232, 234);
     border: none;
     color:black;
     font-family: century-gothic, 'sans-serif';
     font-weight: 400;
     font-style: normal;
+}
+
+nav button:hover{
+    background-color: white;
+    color:rgb(65, 232, 234);
+    border-radius: 10px;
 }
 
 .cart-icon-css{
@@ -43,8 +61,19 @@ nav button{
     position: relative;
     top: 3px;
     right: 0px;
+}
 
+.cart-icon-css:hover{
+    background-color: white;
+    color:rgb(0, 0, 0);
+    cursor: pointer;
+}
 
+.logout{
+    margin: 1px 5px;
+    background-color:  rgb(65, 232, 234);
+    border: none;
+    color:black;
 }
 
 .profile-icon{

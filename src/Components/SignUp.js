@@ -98,6 +98,7 @@ export const SignUp = () => {
           <div>
             <button type="submit" className="btn btn-success btn-md">Submit</button>
           </div>
+          <br></br>
         </form>
       </div>
     </>
