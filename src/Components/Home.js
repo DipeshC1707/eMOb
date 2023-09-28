@@ -4,6 +4,9 @@ import { Products } from "./Products";
 import { Banner } from "./Banner";
 import {auth,db} from '../FIrebase/firebaseConfig'
 import { query ,getDocs,where,collection } from "firebase/firestore";
+import { ProductSlider } from "./ProductsPage/ProductSlider";
+
+
 export const Home = () => {
   function GetCurrentUser(){
     const [user, setuser] = useState("");
@@ -28,12 +31,14 @@ export const Home = () => {
   }
 
   const loggedUser = GetCurrentUser();
-  console.log(loggedUser);
+
   return (
     <>
       <Navbar />
       <Banner/>
-      <Products />
+      <ProductSlider brand={'Oneplus'}/>
     </>
   )
 }
+
+

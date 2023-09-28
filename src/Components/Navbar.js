@@ -9,9 +9,9 @@ import { query ,getDocs,where,collection } from "firebase/firestore";
 
 export const Navbar = () => {
   function GetCurrentUser(){
-    const [user, setuser] = useState("");
-    const userCollection = collection(db,'users');
-    useEffect(() => {
+    const [user, setuser] = useState("")
+    // const userCollection = collection(db,'users');
+    useEffect(() => {  
       auth.onAuthStateChanged(userlogged=>{
         if(userlogged){
           const getUsers = async()=>{
@@ -38,23 +38,40 @@ export const Navbar = () => {
     })
   }
   const loggedUser = GetCurrentUser();
+  // const email = loggedUser[0].email
+
   return (
-    <>
+    <div>
     <div className="navbar">
       <div className="LeftContainer">
         <img src={appLogo}/>
       </div>
       <div className="RightContainer">
-        {!loggedUser && <nav>
+        {!loggedUser && 
+        <nav>
+          <Link to="/"><button>Home</button></Link>
           <Link to="/login"><button>Login</button></Link>
           <Link to="/signup"><button>Signup</button></Link>
           </nav>}
-          {loggedUser && 
+          {loggedUser && loggedUser[0].email!="dipeshchavan8101@mail.com"&&
           <nav>
             <Link to="/"><button>Home</button></Link>
             <div className="cart-btn">
             <img src={cartlogo}/>
-            <span class className='cart-icon-css'>{loggedUser[0].cart}</span>
+            <span className='cart-icon-css'>{loggedUser[0].cart}</span>
+          </div>
+          <Link to="/profile">
+            <img src={profilelogo} className="profile-icon"/>
+          </Link>
+          <button className="logout" onClick={handleLogout}>Log Out</button>
+            </nav>}
+            {loggedUser && loggedUser[0].email=="dipeshchavan8101@mail.com" &&
+            <nav>
+            <Link to="/"><button>Home</button></Link>
+            <Link to="/sellproduct"><button>Sell</button></Link>
+            <div className="cart-btn">
+            <img src={cartlogo}/>
+            <span className='cart-icon-css'>{loggedUser[0].cart}</span>
           </div>
           <Link to="/profile">
             <img src={profilelogo} className="profile-icon"/>
@@ -63,6 +80,12 @@ export const Navbar = () => {
             </nav>}
       </div>
     </div>
-    </>
+    <div className="product-brands">
+      <a href="/brand/Apple"><button>Apple</button></a>
+      <a href="/brand/OnePlus"><button>OnePlus</button></a>
+      <a href="/brand/Vivo"><button>Vivo</button></a>
+      <a href="/brand/Realme"><button>Realme</button></a>
+    </div>
+    </div>
   )
 }

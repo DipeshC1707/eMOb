@@ -24,7 +24,7 @@ nav button{
     background-color:  rgb(65, 232, 234);
     border: none;
     color:black;
-    font-family: century-gothic, 'sans-serif';
+    font-family: figtree, 'sans-serif';
     font-weight: 400;
     font-style: normal;
 }
@@ -65,7 +65,7 @@ nav button:hover{
 
 .cart-icon-css:hover{
     background-color: white;
-    color:rgb(0, 0, 0);
+    color:rgb(65, 232, 234);
     cursor: pointer;
 }
 
@@ -79,4 +79,34 @@ nav button:hover{
 .profile-icon{
     width: 40px;
     padding-right: 5px;
+}
+
+.profile-icon:hover{
+    mix-blend-mode:luminosity;
+    color: white;
+}
+
+.product-brands{
+    background-color: black;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.product-brands button{
+    background-color:black ;
+    padding: 0px 5px;
+    margin: 8px 15px;
+    border: 2px solid white;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;   
+}
+
+.product-brands button:hover{
+    background-color:black ;
+    border: 2px solid rgb(65, 232, 234);
+    color:rgb(65,232,234);
+    font-weight: 600;
 }

@@ -1,0 +1,18 @@
+.success{
+    display: flex;
+    width:100%;
+    justify-content: center;
+    background-color: rgb(112, 246, 112);
+    color:green;
+    padding: 10px;
+    border-radius: 10px;
+}
+.error{
+    display: flex;
+    width:100%;
+    justify-content: center;
+    background-color: rgb(255, 117, 117);
+    color:red;
+    padding: 10px;
+    border-radius: 10px;
+}

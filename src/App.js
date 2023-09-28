@@ -6,6 +6,8 @@ import { Login } from "./Components/Login";
 import { Notefound } from "./Components/Notefound";
 import {ProfilePage} from "./Components/ProfilePage";
 import {Cart} from "./Components/Cart";
+import { AddProduct } from './Components/AddProduct';
+import { AllProductPage } from './Components/ProductsPage/AllProductPage';
 
 function App() {
   return (
@@ -16,7 +18,12 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<Notefound/>}/>
         <Route exact path="/cart" element={<Cart />} />
-        <Route path="/profile" element={<ProfilePage />} />
+        <Route exact path="/sellproduct" element={<AddProduct />} />
+        <Route exact path="/profile" element={<ProfilePage />} />
+        <Route exact path="/brand/apple" element={<AllProductPage brand="apple"/>} />
+        <Route exact path="/brand/vivo" element={<AllProductPage brand="vivo"/>} />
+        <Route exact path="/brand/oneplus" element={<AllProductPage brand="oneplus"/>} />
+        <Route exact path="/brand/realme" element={<AllProductPage brand="realme"/>} />
       </Routes>
     </BrowserRouter>
   );
